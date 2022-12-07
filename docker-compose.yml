@@ -4,9 +4,9 @@ services:
   postgres:
     image: postgres:13
     environment:
-      - POSTGRES_DB=my_store
-      - POSTGRES_USER=nico
-      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_DB=db_store
+      - POSTGRES_USER=carlo
+      - POSTGRES_PASSWORD=Test12345.
     ports:
       - 5432:5432
     volumes:
@@ -23,9 +23,9 @@ services:
   mysql:
     image: mysql:5
     environment:
-      - MYSQL_DATABASE=my_store
-      - MYSQL_USER=root
-      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_DATABASE=db_store
+      - MYSQL_USER=carlo
+      - MYSQL_ROOT_PASSWORD=Test12345.
       - MYSQL_PORT=3306
     ports:
       - 3306:3306
