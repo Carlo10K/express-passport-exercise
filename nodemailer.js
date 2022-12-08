@@ -10,16 +10,16 @@ async function sendMail() {
   let transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
     port: 587,
-    secure: false,
+    secure: false,             //true for 465, false for other ports
     auth: {
         user: 'wallace74@ethereal.email',
-        pass: 'ugS2nYnf2qbF7VCgN9'
+        pass: 'rlbrmoybdpdhnmpa'
     }
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '<wallace74@ethereal.email>', // sender address
+    from: 'wallace74@ethereal.email', // sender address
     to: "wallace74@ethereal.email", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body

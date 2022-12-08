@@ -1,5 +1,5 @@
 const { Model, DataTypes, Sequelize } = require('sequelize');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 
 const USER_TABLE = 'users';
 
@@ -17,6 +17,11 @@ const UserSchema = {
   },
   password: {
     allowNull: false,
+    type: DataTypes.STRING
+  },
+  recoveryToken: {
+    field: 'recovery_token',
+    allowNull: true,
     type: DataTypes.STRING
   },
   role: {
