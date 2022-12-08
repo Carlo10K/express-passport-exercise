@@ -10,6 +10,9 @@ class CustomerService {
     const rta = await models.Customer.findAll({
       include: ['user']
     });
+    for(let user of rta){
+      delete user.user.dataValues.password;
+    }
     return rta;
   }
 
